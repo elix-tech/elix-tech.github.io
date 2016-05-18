@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+We provide the state-of-the-art AI to other companies. We suggest the best model by reading the latest research papers and implement it.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+ディープラーニングを中心とした人工知能・機械学習に特化しています。最新の論文をもとに最適なモデルを提案・実装します。お気軽にご相談ください。
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Email: [ai.elix.inc@gmail.com](mailto:ai.elix.inc@gmail.com)
