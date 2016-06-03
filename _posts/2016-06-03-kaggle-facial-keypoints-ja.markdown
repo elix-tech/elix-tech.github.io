@@ -7,7 +7,7 @@ categories: ja
 ---
 
 KaggleのチュートリアルにもなっているDaniel Nouriさんの[Using convolutional neural nets to detect facial keypoints tutorial](http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/)
-という記事の流れに沿って、[Facial Keypoints Detection](https://www.kaggle.com/c/facial-keypoints-detection)を[Keras](http://keras.io/)で実装していきます。単純なモデルから徐々に複雑しながら解説していきます。多少の機械学習の知識があることを前提にしますが、なるべく分かりやすく解説していきたいと思います。間違い・質問・提案などあれば遠慮なく連絡してください。
+という記事の流れに沿って、[Facial Keypoints Detection](https://www.kaggle.com/c/facial-keypoints-detection)を[Keras](http://keras.io/)で実装していきます。単純なモデルから徐々に複雑にしながら解説していきます。多少の機械学習の知識があることを前提にしますが、なるべく分かりやすく解説していきたいと思います。間違い・質問・提案などあれば遠慮なく連絡してください。
 
 KerasはPythonで書くことができるTheanoとTensorFlowベースのライブラリです。直感的に書くことができる人気急上昇中のライブラリです。2015年3月に初公開され、2016年4月にKeras 1.0が公開されました。
 
