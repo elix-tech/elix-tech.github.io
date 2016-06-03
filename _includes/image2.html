@@ -1,0 +1,8 @@
+<!-- _includes/image.html -->
+<div class="image-wrapper" >
+    <img src="{{ include.img }}" width="49%" style="margin-right:10px;" />
+    <img src="{{ include.img2 }}" width="49%" />
+    {% if include.caption %}
+        <p class="image-caption">{{ include.caption }}</p>
+    {% endif %}
+</div>
