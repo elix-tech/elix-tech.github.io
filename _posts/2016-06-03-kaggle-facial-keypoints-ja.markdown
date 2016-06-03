@@ -2,7 +2,7 @@
 layout: post
 title:  "Kaggle Facial Keypoints DetectionをKerasで実装する"
 author: <a href='https://twitter.com/tuntuku_sy'>Shinya Yuki</a>
-date:   2016-06-03 09:00:00 JST
+date:   2016-06-03 00:00:00 +0900
 categories: ja
 ---
 
