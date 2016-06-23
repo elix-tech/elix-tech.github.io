@@ -73,7 +73,7 @@ Facial Keypoints Detectionチャレンジの[訓練データ](https://www.kaggle
 このチャレンジでは、left_eye_center、right_eye_outer_corner、mouth_center_bottom_lipのようなkeypoints（顔の特徴的な場所）15ヶ所（それぞれx, y座標を持つ）を学習し、推定します。
 
 {% include image.html
-            img="/images/kaggle_facial_keypoints/face1_with_keypoints.png"
+            img="/images/2016/kaggle_facial_keypoints/face1_with_keypoints.png"
             caption="<a href='https://www.kaggle.com/c/facial-keypoints-detection/details/getting-started-with-r'>Kaggleより引用</a>" %}
 
 
@@ -211,7 +211,7 @@ Kerasではこのように非常に直感的にコードを書くことができ
 96x96 = 9216の画像がインプットされます。中間層のニューロン数は100です。活性化関数はReLU （rectified linear unitの略）を使用しています。近年最もよく使われる活性化関数です。ReLUは f(x) = max(0, x)で表される関数で、下図の青線の形をしています。
 
 {% include image.html
-            img="/images/kaggle_facial_keypoints/relu.png"
+            img="/images/2016/kaggle_facial_keypoints/relu.png"
             caption="Wikipediaより引用" %}
 
 LasagneではReLUがデフォルトの活性化関数になっていますが、Kerasではlinear、つまりデフォルトでは活性化関数は適用されません。
@@ -234,7 +234,7 @@ x += v
 同じ方向に力を受け続けると`- learning_rate * grad`によってその方向にどんどん加速していきます。`mu`はモメンタムと呼ばれるハイパーパラメータですが、物理的な描写ではむしろ空気摩擦のようなものに対応します。0.9という値がよく使われます。この摩擦によって運動エネルギーが抜かれ、最後にポテンシャルの谷の底に落ち着くことができます。
 
 {% include image.html
-            img="/images/kaggle_facial_keypoints/sgd_trajectory.png"
+            img="/images/2016/kaggle_facial_keypoints/sgd_trajectory.png"
             caption="<a href='http://cs231n.stanford.edu/slides/winter1516_lecture6.pdf'>
             CS231n: Convolutional Neural Networks for Visual Recognitionより引用</a>" %}
 
@@ -254,8 +254,8 @@ Adagradの弱点は、一方的にキャッシュが溜まっていくため、�
 よく引用されるアニメーションをここにも貼っておきたいと思います。
 
 {% include image2.html
-            img="/images/kaggle_facial_keypoints/animation1.gif"
-            img2="/images/kaggle_facial_keypoints/animation2.gif"
+            img="/images/2016/kaggle_facial_keypoints/animation1.gif"
+            img2="/images/2016/kaggle_facial_keypoints/animation2.gif"
             caption="左図：MomentumやNAGではボールのように転がっていく。
             右図：RMSpropのようなアルゴリズムは小さい勾配をうまくとらえることができている。
             Image Credit: <a href='https://twitter.com/alecrad'>Alec Radford</a>" %}
@@ -345,7 +345,7 @@ pyplot.yscale('log')
 pyplot.show()
 ```
 
-{% include image.html img="/images/kaggle_facial_keypoints/model1_result.png" %}
+{% include image.html img="/images/2016/kaggle_facial_keypoints/model1_result.png" %}
 
 グラフの横軸の単位はエポック（Epoch）です。これは「何回全てのサンプルを見たか」を表しています。1エポックであれば、全てのサンプルが一度見られたということになります。イテレーション数はバッチサイズの影響を受けるため、横軸には一般にエポックが使われます。
 
@@ -355,7 +355,7 @@ pyplot.show()
 
 ちなみにNesterov accelerated gradientと純粋なSGDを比較すると下図のようになります。Nesterov accelerated gradientは純粋なSGDに比べてより早く収束していることが分かります。
 
-{% include image.html img="/images/kaggle_facial_keypoints/model1_result_without_nesterov.png" %}
+{% include image.html img="/images/2016/kaggle_facial_keypoints/model1_result_without_nesterov.png" %}
 
 
 次に、学習済みのモデルを使ってkeypointsを出力し、顔のどのあたりに位置しているか実際に見てみましょう。
@@ -377,7 +377,7 @@ for i in range(16):
 pyplot.show()
 ```
 <br>
-{% include image.html img="/images/kaggle_facial_keypoints/facial_keypoints_1.png" %}
+{% include image.html img="/images/2016/kaggle_facial_keypoints/facial_keypoints_1.png" %}
 
 <br>
 
@@ -411,12 +411,12 @@ model.load_weights('model1_weights.h5')
 
 畳み込み層では、入力である画像に対して下図のようにフィルタを当ててスライドしていきます。ここで学習するのは各フィルタの重みで、重みは下図のピンク色のニューロン間で共有されています。普通のニューラルネットワークではニューロンはひとつ前の層の全てのニューロンと繋がっていましたが、ここでは一部とのみ繋がりがあるようになっています。
 
-{% include image.html img="/images/kaggle_facial_keypoints/cnn_filter.gif"
+{% include image.html img="/images/2016/kaggle_facial_keypoints/cnn_filter.gif"
   caption="<a href='http://ufldl.stanford.edu/tutorial/supervised/FeatureExtractionUsingConvolution/'>UFLDL Tutorialより引用</a>"%}
 
 プーリング層の役割はサイズを小さくすることによりパラメータや計算量を減らしたり、過学習を防ぐことです。下図のように最大プーリング（Max Pooling）の場合は、対象となる範囲の最大値を出力します。また、図のように入力に対して出力のサイズは小さくなります。
 
-{% include image.html img="/images/kaggle_facial_keypoints/cnn_pooling.jpg"
+{% include image.html img="/images/2016/kaggle_facial_keypoints/cnn_pooling.jpg"
   caption="<a href='http://cs231n.github.io/convolutional-networks/'>CS231n: Convolutional Neural Networks for Visual Recognitionより引用</a>"%}
 
 全結合層では、普通のニューラルネットワークと同じ構造をしていて、ニューロンはひとつ前の層の全てのニューロンと繋がっています。
@@ -477,7 +477,7 @@ from keras.utils.visualize_util import plot
 plot(model2, to_file='model2.png', show_shapes=True)
 ```
 
-{% include image.html img="/images/kaggle_facial_keypoints/model2.png" %}
+{% include image.html img="/images/2016/kaggle_facial_keypoints/model2.png" %}
 
 <br>
 
@@ -485,7 +485,7 @@ plot(model2, to_file='model2.png', show_shapes=True)
 
 学習曲線も見てみましょう。
 
-{% include image.html img="/images/kaggle_facial_keypoints/facial_keypoints_2.png" %}
+{% include image.html img="/images/2016/kaggle_facial_keypoints/facial_keypoints_2.png" %}
 
 <br>
 
@@ -508,7 +508,7 @@ pyplot.show()
 ```
 
 {% include image.html
-            img="/images/kaggle_facial_keypoints/face2_with_keypoints.png"
+            img="/images/2016/kaggle_facial_keypoints/face2_with_keypoints.png"
             caption="左：model1、右：model2" %}
 
 `model2`の方がより正確な位置にプロットできている様子が分かります。
@@ -537,7 +537,7 @@ pyplot.show()
 ```
 
 {% include image.html
-            img="/images/kaggle_facial_keypoints/flipped_face.png"
+            img="/images/2016/kaggle_facial_keypoints/flipped_face.png"
             caption="左：元画像、右：水平反転した画像" %}
 
 <br>
@@ -674,7 +674,7 @@ hist3 = model3.fit_generator(flipgen.flow(X_train, y_train),
 
 結果を見てみましょう。水平反転したデータを加えた方（`model3`）では過学習が軽減されている様子が分かります。また、バリデーションエラーが僅かに小さくなっています。
 
-{% include image.html img="/images/kaggle_facial_keypoints/model3_result.png" %}
+{% include image.html img="/images/2016/kaggle_facial_keypoints/model3_result.png" %}
 
 
 毎回最初から学習し直すのではなく、前回学習した続きから学習したい場合があると思います。
@@ -701,7 +701,7 @@ hist3 = model3.fit_generator(flipgen.flow(X_train, y_train),
 
 時間とともに学習係数を変化させることによって収束を早めることを考えます。
 
-{% include image.html img="/images/kaggle_facial_keypoints/learning_rate.jpeg"
+{% include image.html img="/images/2016/kaggle_facial_keypoints/learning_rate.jpeg"
   caption="<a href='http://cs231n.github.io/neural-networks-3/'>
   CS231n: Convolutional Neural Networks for Visual Recognitionより引用</a>" %}
 
@@ -741,7 +741,7 @@ hist4 = model4.fit_generator(flipgen.flow(X_train, y_train),
 
 Kerasで学習係数を変更するのには`LearningRateScheduler`を使用します。コールバックを自分で書けばモメンタムも時間とともに変化させることができそうですが、Kerasではデフォルトでは学習係数しか変更できないため、ここでは学習係数のみを変更します。
 
-{% include image.html img="/images/kaggle_facial_keypoints/model4_result.png" %}
+{% include image.html img="/images/2016/kaggle_facial_keypoints/model4_result.png" %}
 
 学習係数を変化させた場合（`model4`）の方がより速く学習が進み、かつバリデーションエラーをさらに低くできていることが分かります。
 
@@ -749,7 +749,7 @@ Kerasで学習係数を変更するのには`LearningRateScheduler`を使用し�
 
 ### <a name="dropout"></a>ドロップアウト
 
-{% include image.html img="/images/kaggle_facial_keypoints/dropout.jpeg"
+{% include image.html img="/images/2016/kaggle_facial_keypoints/dropout.jpeg"
   caption="<a href='http://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf'>Srivastava et al. 2014 より引用</a>" %}
 
 ドロップアウトは、過学習を防ぐ非常に有効かつシンプルな手法で、近年よく使われます。図のように一定の確率でランダムにニューロンを無視して学習を進めます。
@@ -811,7 +811,7 @@ hist5 = model5.fit_generator(flipgen.flow(X_train, y_train),
 
 結果は以下になります。
 
-{% include image.html img="/images/kaggle_facial_keypoints/model5_result.png" %}
+{% include image.html img="/images/2016/kaggle_facial_keypoints/model5_result.png" %}
 
 ドロップアウトを行うと収束に時間がかかるようになります。また、`model5`ではバリデーションエラーよりも訓練誤差の方が大きくなっているように見えます。この訓練誤差にはドロップアウトが含まれていますが、バリデーションエラーの方にはドロップアウトが含まれていないことに注意する必要があります。
 
@@ -840,7 +840,7 @@ model6.add(Dense(30))
 # ...
 ```
 
-{% include image.html img="/images/kaggle_facial_keypoints/model6_result.png" %}
+{% include image.html img="/images/2016/kaggle_facial_keypoints/model6_result.png" %}
 
 バリデーションエラーは0.0008とこれまでで最も低い値になりました。計算を続けるともっとエラーが下がっていきそうですが、5000エポックまでで既に6時間程度計算に時間がかかっているのでここまでにしておきたいと思います。
 
@@ -850,7 +850,7 @@ model6.add(Dense(30))
 
 ここで簡単にEarly Stoppingという手法を簡単に紹介しておきます。
 
-{% include image.html img="/images/kaggle_facial_keypoints/early_stopping.png"
+{% include image.html img="/images/2016/kaggle_facial_keypoints/early_stopping.png"
   caption="<a href='https://work.caltech.edu/telecourse.html'>Caltech,  Learning from Data より引用</a>" %}
 
 図のように過学習が進んでいくと、バリデーションエラーは減少から増加に転じます。そのため、バリデーションエラーが最小になった所で学習をストップさせてしまえば良いと考えられます。
@@ -1005,7 +1005,7 @@ def fit_specialists():
 転移学習には様々なパターンがあります。下図のように畳み込み層をフリーズさせて（重みを更新しないで）全結合層のみを学習させるパターンや、畳み込み層も含めて全ての層で学習を行うパターンなどがあります。
 
 {% include image.html
-            img="/images/kaggle_facial_keypoints/transfer_learning.png"
+            img="/images/2016/kaggle_facial_keypoints/transfer_learning.png"
             caption="<a href='http://cs231n.stanford.edu/slides/winter1516_lecture11.pdf'>
             CS231n: Convolutional Neural Networks for Visual Recognitionより引用</a>" %}
 
@@ -1050,7 +1050,7 @@ nb_epoch = 300
 
 本当はもっと長く学習させたいのですが、かなり時間がかかるので今回は300エポックにしてみました。これだけでもGPUを使用して5時間くらいかかっています。また、開始時の学習係数はこれまでよりも少し小さい0.01に設定してあります。転移学習によって（出力層以外は）既にある程度学習が進んだ状態から始まるため、少し小さめの学習係数の方がよいだろうと考えたからです。初期値として使用する重みとしては5000エポックまで計算している`model6`のものを使用しました。
 
-{% include image.html img="/images/kaggle_facial_keypoints/model_specialist_result.png"
+{% include image.html img="/images/2016/kaggle_facial_keypoints/model_specialist_result.png"
   caption="実線：訓練誤差。点線：バリデーションエラー" %}
 
 6つのモデルの学習曲線に加えて、比較のために`model6`の学習曲線も載せておきました（`model6`は5000エポックまで計算しているので、各エポックにおける学習係数は`model8`とは異なります）。
