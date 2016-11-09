@@ -10,6 +10,6 @@ We provide the state-of-the-art AI to everyone. We suggest the best model and so
 
 <br>
 
-Website (English): <a href="http://en.elix-inc.com/">http://en.elix-inc.com/</a>  
+Website (English): <a href="http://elix-inc.com/">http://elix-inc.com/</a>  
 Website (Japanese): <a href="http://ja.elix-inc.com/">http://ja.elix-inc.com/</a>  
 Email: [info[at]elix-inc.com](mailto:info@elix-inc.com)
