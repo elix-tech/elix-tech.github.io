@@ -8,7 +8,7 @@
 # Site settings
 company: Elix
 title: Elix Tech Blog
-website-en: http://en.elix-inc.com/
+website-en: http://elix-inc.com/
 website-ja: http://ja.elix-inc.com/
 email: info[at]elix-inc.com
 description: > # this means to ignore newlines until "baseurl:"
