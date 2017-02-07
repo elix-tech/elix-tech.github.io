@@ -4,6 +4,7 @@ title:  "Kerasで学ぶAutoencoder"
 author: <a href='https://twitter.com/tuntuku_sy'>Shinya Yuki</a>
 date:   2016-07-18 00:00:00 +0900
 categories: ja
+image: /images/2016/autoencoder/autoencoder_illustration.png
 ---
 
 Kerasの公式ブログに[Autoencoder（自己符号化器）に関する記事](http://blog.keras.io/building-autoencoders-in-keras.html)があります。今回はこの記事の流れに沿って実装しつつ、Autoencoderの解説をしていきたいと思います。間違いがあれば指摘して下さい。また、[Kerasの公式ブログ](http://blog.keras.io/index.html)はKerasでの実装に関してだけでなく、機械学習自体についても勉強になることが多く、非常におすすめです。

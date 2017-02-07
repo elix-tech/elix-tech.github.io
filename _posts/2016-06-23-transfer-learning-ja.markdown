@@ -4,6 +4,7 @@ title:  "Kerasで学ぶ転移学習"
 author: <a href='https://twitter.com/tuntuku_sy'>Shinya Yuki</a>
 date:   2016-06-23 00:00:00 +0900
 categories: ja
+image: /images/2016/keras_transfer/deconvolution.png
 ---
 
 [前回記事](https://elix-tech.github.io/ja/2016/06/02/kaggle-facial-keypoints-ja.html)では、Kaggleの[Facial Keypoints Detection](https://www.kaggle.com/c/facial-keypoints-detection)を題材にして、単純なニューラルネットワークから転移学習まで解説しました。
