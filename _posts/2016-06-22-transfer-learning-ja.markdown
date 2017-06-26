@@ -2,7 +2,7 @@
 layout: post
 title:  "Kerasで学ぶ転移学習"
 author: <a href='https://twitter.com/tuntuku_sy'>Shinya Yuki</a>
-date:   2016-06-23 00:00:00 +0900
+date:   2016-06-22 00:00:00 +0900
 categories: ja
 image: /images/2016/keras_transfer/deconvolution.png
 ---
