@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-We provide the state-of-the-art AI to everyone. We suggest the best model and solution by reading the latest research papers and implement it.
+We are a technology company that specializes in deep learning. We apply cutting-edge technology to industries promptly and contribute to developments of businesses.
 
-ディープラーニングを中心とした人工知能・機械学習に特化しています。最新の論文、動向を追いながら、最適なモデル・ソリューションを提案し、実装します。お気軽にご相談ください。
+株式会社Elixはディープラーニングに特化したテクノロジーカンパニーです。最新の研究成果をいち早く産業に応用し、ビジネスの発展に貢献します。お気軽にご相談ください。
 
 <br>
 
