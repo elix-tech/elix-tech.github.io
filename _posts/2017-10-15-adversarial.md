@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "はじめてのAdversarial Example"
-author: <a href='https://twitter.com/tuntuku_sy'>Shinya Yuki</a>
+author: <a href='https://twitter.com/shinyaelix'>Shinya Yuki</a>
 date:   2017-10-15 00:00:00 +0000
 categories: ja
 image: /images/2017/adversarial/illustration.png
